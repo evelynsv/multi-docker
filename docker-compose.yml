@@ -35,13 +35,6 @@ services:
     volumes:
       - /app/node_modules
       - ./client:/app
-  server:
-    build:
-      dockerfile: Dockerfile.dev
-      context: ./server
-    volumes:
-      - /app/node_modules
-      - ./server:/app
   worker:
     build:
       dockerfile: Dockerfile.dev
